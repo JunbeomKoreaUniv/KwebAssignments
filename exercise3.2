@@ -1,0 +1,10 @@
+const getDivisors = num => {
+    const sosu = [];
+    for(let i=1; i<=Math.sqrt(num); i++) {
+        if (num % i == 0) {
+            sosu.push(i);
+            if(i*i != num) sosu.push(num/i);
+        }
+    }
+    return sosu.sort((first, second) => first - second);
+};
