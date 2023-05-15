@@ -1,0 +1,7 @@
+const isValidNumber = num => {
+    const realnum = parseInt(num);
+    if (!isFinite(realnum)) return false;
+    if (isNaN(realnum)) return false;
+    if (realnum != num) return false;
+    return realnum>=1 && realnum<=9;
+};
